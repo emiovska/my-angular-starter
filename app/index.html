@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>E AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+</head>
+<body ng-controller="IndexCtrl">
+<md-toolbar ng-cloak>
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+      <md-tooltip>S&T HR</md-tooltip>
+      <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+    </md-button>
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>S&T HR</span>
+      </h2>
+    </div>
+  </div>
+</md-toolbar>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2"
+            md-component-id="left" ng-cloak>
+  <md-toolbar layout="row">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>S&T HR</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+        <md-tooltip>Close Side Panel</md-tooltip>
+        <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-content layout-padding="">
+    <md-list>
+      <md-subheader class="md-no-sticky">Favorites</md-subheader>
+
+      <md-list-item>
+        <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
+        <p>Buttons</p>
+        <md-icon class="md-secondary">2</md-icon>
+      </md-list-item>
+      <md-list-item>
+        <md-icon class="md-default-theme" class="material-icons">&#xE251;</md-icon>
+        <p>Photos</p>
+        <md-icon class="md-secondary">2</md-icon>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-subheader class="md-no-sticky">Pages</md-subheader>
+      <md-list-item>
+        <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
+        <p>Pages Feed</p>
+
+        <div class="md-secondary">2</div>
+      </md-list-item>
+      <md-list-item>
+        <md-icon class="md-default-theme" class="material-icons">&#xE1BC;</md-icon>
+        <p>Like Pages</p>
+
+        <div class="md-secondary">20+</div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>
+
+<div ng-view></div>
+
+<script src="../dist/lib.js"></script>
+<link rel="stylesheet" href="../dist/style.css">
+<script src="../dist/src.js"></script>
+
+</body>
+</html>
